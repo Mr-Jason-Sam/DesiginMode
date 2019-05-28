@@ -1,36 +1,36 @@
 package Factory;
 
 public class AbstractFactory {
-	public interface Produce1 {
-		public void dosomething();
+	public static abstract class Produce1 {
+		public abstract void dosomething();
 	}
 	
-	public static class ConcreteProduceA1 implements Produce1 {
+	public static class ConcreteProduceA1 extends Produce1 {
 		@Override
 		public void dosomething() {
 			System.out.println("I am ProduceA1!");
 		}
 	}
 	
-	public static class ConcreteProduceB1 implements Produce1 {
+	public static class ConcreteProduceB1 extends Produce1 {
 		@Override
 		public void dosomething() {
 			System.out.println("I am ProduceB1!");
 		}
 	}
 	
-	public interface Produce2 {
-		public void dosomething();
+	public static abstract class Produce2 {
+		public abstract void dosomething();
 	}
 	
-	public static class ConcreteProduceA2 implements Produce2 {
+	public static class ConcreteProduceA2 extends Produce2 {
 		@Override
 		public void dosomething() {
 			System.out.println("I am ProduceA2!");
 		}
 	}
 	
-	public static class ConcreteProduceB2 implements Produce2 {
+	public static class ConcreteProduceB2 extends Produce2 {
 		@Override
 		public void dosomething() {
 			System.out.println("I am ProduceB2!");
