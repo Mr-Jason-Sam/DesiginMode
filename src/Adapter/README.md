@@ -15,25 +15,25 @@
 	
 	适配器模式是一个补救措施，而不是开发阶段的产物，所以一般都是投产后的产品的一个功能补充，BUG修复等情况下使用。
 
-* 拓展：![ExpendUML.png](https://upload-images.jianshu.io/upload_images/1933808-f8602b99bdd72dc1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+* 拓展：![拓展适配器](https://upload-images.jianshu.io/upload_images/1933808-f8602b99bdd72dc1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 	适配器模式仅可以通过继承/实现的方式进行拓展，也可以通过关联，组装适配类。
 
 ###适配器模式实践
 ####源接口
 ```
-	public static interface IAdaptee {
+	public interface IAdaptee {
 		public void origin();
 	}
 ```
 ####目标接口
 ```
-	public static interface ITarget {
+	public interface ITarget {
 		public void expend();
 	}
 ```
 ####适配器角色
 ```
-	public static class Adapter implements IAdaptee, ITarget{
+	public class Adapter implements IAdaptee, ITarget{
 		@Override
 		public void expend() {
 			System.out.println("I am a target!");
